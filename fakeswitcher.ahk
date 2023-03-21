@@ -2,12 +2,17 @@
 SendMode Input
 SetWorkingDir, %A_ScriptDir%
 
+voice:=ComObjCreate("SAPI.SpVoice")
+voice.volume:=100
+
 ^#Right::
-MsgBox, Samahith is cool and quirky
+voice.Speak("Miss Parker is cool and quirky")
+MsgBox, Ms. Parker is cool and quirky
 Return
 
 #Tab::
-MsgBox, Samahith is cool and quirky
+voice.Speak("Miss Parker is cool and quirky")
+MsgBox, Ms. Parker is cool and quirky
 Return
 
 ^`::
